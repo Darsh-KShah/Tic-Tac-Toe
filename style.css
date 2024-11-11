@@ -31,21 +31,21 @@ h1 {
 }
 
 #container {
-    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 70vh;
 }
 
 #game-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vh;
     height: 60vh;
     width: 60vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2vh;
     position: relative;
+    margin: 0 auto;
 }
 
 .box {
@@ -54,7 +54,7 @@ h1 {
     background-color: #0077b6;
     color: #caf0f8;
     font-size: 7vh;
-    border: 3px solid #caf0f8;
+    border: 0.5vh solid #caf0f8;
     border-radius: 4vh;
     cursor: pointer;
     opacity: 0.8;
@@ -117,3 +117,85 @@ h1 {
         transform: scale(1);
     }
 }
+
+/* @media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 4vh;
+    }
+    #player {
+        font-size: 2vh;
+    }
+    #game-area {
+        max-width: 50vh;
+        max-height: 50vh;
+    }
+    .box {
+        height: 20vh;
+        width: 20vh;
+        font-size: 8vh;
+    }
+    #reset-button {
+        font-size: 2.5vh;
+    }
+    .newgame-button {
+        font-size: 4vh;
+    }
+    #container {
+        margin-right: 5vw; /* Adds a little margin to the right */
+    }
+} */
+
+/* 
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 4vh;
+    }
+    #player {
+        font-size: 2vh;
+    }
+    #game-area {
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+    .box {
+        height: 25vw;
+        width: 25vw;
+        font-size: 10vw;
+    }
+    #reset-button {
+        font-size: 2.5vh;
+    }
+    .newgame-button {
+        font-size: 4vh;
+    }
+    #container {
+        margin-right: 7vw; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 3vh;
+    }
+    #player {
+        font-size: 2vh;
+    }
+    #game-area {
+        max-width: 90vw;
+        max-height: 90vw;
+    }
+    .box {
+        height: 30vw;
+        width: 30vw;
+        font-size: 12vw;
+    }
+    #reset-button {
+        font-size: 2vh;
+    }
+    .newgame-button {
+        font-size: 3vh;
+    }
+    #container {
+        margin-right: 7vw; 
+    }
+} */

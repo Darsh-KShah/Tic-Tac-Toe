@@ -85,7 +85,7 @@ boxes.forEach((box) => {
 function reset() {
     boxes.forEach((box) => {
         box.innerText = '';
-        box.style.border = "3px solid #caf0f8";
+        box.style.border = "0.5vh solid #caf0f8";
         box.style.opacity = "0.8";
         box.style.backgroundColor = "";
         box.disabled = false;
