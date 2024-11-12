@@ -84,7 +84,7 @@ h1 {
 .winMsg {
     position: absolute;
     top: 10vh;
-    font-size: 5vh;
+    font-size: 4vh;
     text-align: center;
     background-color: #f1c40f;
     color: #03045e;
@@ -94,28 +94,18 @@ h1 {
     display: none;
 }
 
-.newgame-button {
-    position: absolute;
-    left: 11.5vw;
-    top: 35vh;
-    padding: 10px 15px;
-    background-color: #f1c40f;
-    color: #03045e;
-    font-size: 5vh;
-    border: none;
-    border-radius: 2vh;
-    cursor: pointer;    
-    z-index: 1;
-    display: none;
+.newgame-mode {
+    font-size: 3.5vh;
     animation: resize 1s infinite;
 }
+
 
 @keyframes resize {
     0% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
     100% {
         transform: scale(1);

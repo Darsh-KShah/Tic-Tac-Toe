@@ -2,11 +2,10 @@ let boxes = document.querySelectorAll(".box");
 let player1 = document.querySelector("#p1");
 let player2 = document.querySelector("#p2");
 let winMsg = document.querySelector(".winMsg");
-let newgameBtn = document.querySelector(".newgame-button");
 let resetBtn = document.querySelector("#reset-button");
 let pTurn = 1;
 let gameOver = false;
-let isDraw = true; 
+let isDraw = true;
 
 const winPatterns = [
     [0, 1, 2],
@@ -22,13 +21,15 @@ const winPatterns = [
 function displayWinMsg(winner) {
     winner === 'X' ? winMsg.textContent = 'Congratulations Player 1!' : winMsg.textContent = 'Congratulations Player 2!';
     winMsg.style.display = "block";
-    newgameBtn.style.display = "block";
+    resetBtn.textContent = "New Game";
+    resetBtn.classList.add("newgame-mode"); 
 }
 
 function displayDrawMsg() {
     winMsg.textContent = "It's a Draw!";
     winMsg.style.display = "block";
-    newgameBtn.style.display = "block";
+    resetBtn.textContent = "New Game"; 
+    resetBtn.classList.add("newgame-mode"); 
 }
 
 boxes.forEach((box) => {
@@ -50,33 +51,30 @@ boxes.forEach((box) => {
             pTurn = 1;
             player1.classList.add("p");
             player2.classList.remove("p");
-        }   
-        box.disabled = true;
+        }
+        box.disabled = true;        
         for (let vl of winPatterns) {
             let [a, b, c] = vl;
             if (boxes[a].innerText && boxes[a].innerText === boxes[b].innerText && boxes[b].innerText === boxes[c].innerText) {
-                // boxes[a].classList.add("winPat");
                 boxes[a].style.backgroundColor = "red";
                 boxes[b].style.backgroundColor = "red";
-                boxes[c].style.backgroundColor = "red";    
+                boxes[c].style.backgroundColor = "red";
                 boxes[a].style.opacity = "1";
                 boxes[b].style.opacity = "1";
                 boxes[c].style.opacity = "1";
-                resetBtn.style.opacity = "0.5";             
-                displayWinMsg(boxes[a].innerText);          
-                gameOver = true;                
+                displayWinMsg(boxes[a].innerText);
+                gameOver = true;
                 break;
             }
-        }    
-        isDraw = true;      
+        }        
+        isDraw = true;
         boxes.forEach(box => {
-            if(box.innerText === '') {
+            if (box.innerText === '') {
                 isDraw = false;
             }
         });
-        if(isDraw && !gameOver) {
+        if (isDraw && !gameOver) {
             displayDrawMsg();
-            resetBtn.style.opacity = "0.5"; 
             gameOver = true;
         }
     });
@@ -89,16 +87,14 @@ function reset() {
         box.style.opacity = "0.8";
         box.style.backgroundColor = "";
         box.disabled = false;
-        box.classList.remove("winPat");
     });
     player1.classList.add("p");
     player2.classList.remove("p");
     winMsg.style.display = "none";
-    newgameBtn.style.display = "none";
-    resetBtn.style.opacity = "1";
+    resetBtn.textContent = "Reset Game"; 
+    resetBtn.classList.remove("newgame-mode"); 
     gameOver = false;
     pTurn = 1;
 }
 
-newgameBtn.addEventListener("click", reset);
 resetBtn.addEventListener("click", reset);
