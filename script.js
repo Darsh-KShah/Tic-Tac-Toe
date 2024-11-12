@@ -20,13 +20,13 @@ const winPatterns = [
 ];
 
 function displayWinMsg(winner) {
-    winner === 'X' ? winMsg.textContent = 'Congratulations Player 1 Game Over! ' : winMsg.textContent = 'Congratulations Player 2 Game Over!';
+    winner === 'X' ? winMsg.textContent = 'Congratulations Player 1!' : winMsg.textContent = 'Congratulations Player 2!';
     winMsg.style.display = "block";
     newgameBtn.style.display = "block";
 }
 
 function displayDrawMsg() {
-    winMsg.textContent = "It's a Draw! Game Over";
+    winMsg.textContent = "It's a Draw!";
     winMsg.style.display = "block";
     newgameBtn.style.display = "block";
 }

@@ -11,51 +11,55 @@ body {
 
 h1 {    
     background-color: #0077b6;
-    font-size: 6vh;
-    padding: 10px;    
+    height: 10vh;
+    font-size: 8vh;
+    padding: 5px;    
 }
 
 #player {
+    height: 10vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px 0px;
+    padding: 5px 0px;
     font-size: 3vh;
 }
 
 .p {
     background-color: red;
+    color: black;
     padding: 10px;
     border: 2px solid #ade8f4;
     border-radius: 2vh;
 }
 
 #container {
+    height: 68vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
 }
 
 #game-area {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2vh;
     height: 60vh;
-    width: 60vh;
+    width: 36vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.3vh;
+    column-gap: 0.8vw;
     position: relative;
-    margin: 0 auto;
 }
 
 .box {
     height: 18vh;
-    width: 18vh;
+    width: 10vw;
     background-color: #0077b6;
     color: #caf0f8;
     font-size: 7vh;
-    border: 0.5vh solid #caf0f8;
-    border-radius: 4vh;
+    border: 3px solid #caf0f8;
+    border-radius: 20px;
     cursor: pointer;
     opacity: 0.8;
 }
@@ -68,6 +72,7 @@ h1 {
 
 #reset-button {
     padding: 10px;
+    margin-bottom: 0.5vh;
     background-color: #f1c40f;
     color: #03045e;
     font-size: 3vh;
@@ -78,8 +83,7 @@ h1 {
 
 .winMsg {
     position: absolute;
-    left: 5%;
-    top: 30%;
+    top: 10vh;
     font-size: 5vh;
     text-align: center;
     background-color: #f1c40f;
@@ -92,9 +96,9 @@ h1 {
 
 .newgame-button {
     position: absolute;
-    left: 28%;
-    top: 65%;
-    padding: 15px;
+    left: 11.5vw;
+    top: 35vh;
+    padding: 10px 15px;
     background-color: #f1c40f;
     color: #03045e;
     font-size: 5vh;
@@ -118,83 +122,99 @@ h1 {
     }
 }
 
-/* @media screen and (max-width: 1024px) {
-    h1 {
-        font-size: 4vh;
-    }
-    #player {
-        font-size: 2vh;
-    }
-    #game-area {
-        max-width: 50vh;
-        max-height: 50vh;
-    }
+@media (max-width: 768px) {
     .box {
-        height: 20vh;
-        width: 20vh;
-        font-size: 8vh;
+        height: 14vh;
+        width: 13vw;
+        font-size: 5vh;
     }
-    #reset-button {
-        font-size: 2.5vh;
-    }
-    .newgame-button {
-        font-size: 4vh;
-    }
-    #container {
-        margin-right: 5vw; /* Adds a little margin to the right */
-
-
-/* 
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 4vh;
-    }
-    #player {
-        font-size: 2vh;
-    }
+    
     #game-area {
-        max-width: 80vw;
-        max-height: 80vw;
+        width: 48vw;
+        column-gap: 3.5vw;
     }
-    .box {
-        height: 25vw;
-        width: 25vw;
-        font-size: 10vw;
-    }
-    #reset-button {
-        font-size: 2.5vh;
-    }
+    
     .newgame-button {
-        font-size: 4vh;
+        position: absolute;
+        left: 6vw;
+        font-size: 3vh;
+        padding: 10px 15px;
     }
-    #container {
-        margin-right: 7vw; 
+
+    h1 {
+        font-size: 6vh;
+        height: 12vh;
+    }
+
+    .winMsg {
+        font-size: 4.5vh;
+        padding: 15px;
+        top: 12vh;
     }
 }
 
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 3vh;
-    }
-    #player {
-        font-size: 2vh;
-    }
-    #game-area {
-        max-width: 90vw;
-        max-height: 90vw;
-    }
+@media (max-width: 480px) {
     .box {
-        height: 30vw;
-        width: 30vw;
-        font-size: 12vw;
+        height: 12vh;
+        width: 14vw;
+        font-size: 4vh;
     }
-    #reset-button {
-        font-size: 2vh;
+    
+    #game-area {
+        width: 52vw;
+        column-gap: 5vw;
     }
+    
     .newgame-button {
-        font-size: 3vh;
+        position: absolute;
+        left: 4vw;
+        font-size: 3.5vh;
+        padding: 12px 18px;
     }
-    #container {
-        margin-right: 7vw; 
+
+    h1 {
+        font-size: 5vh;
+        height: 10vh;
     }
-} */
+
+    .winMsg {
+        font-size: 4vh;
+        padding: 12px;
+        top: 10vh;
+    }
+}
+
+@media (max-height: 600px) {
+    .box {
+        font-size: 4vh;
+        height: 10vh;
+        width: 12vw;
+    }
+
+    .winMsg, .newgame-button {
+        position: absolute;
+        font-size: 4vh;
+        padding: 15px;
+    }
+
+    #game-area {
+        width: 50vw;
+        column-gap: 4vw;
+    }
+
+    h1 {
+        font-size: 4.5vh;
+        height: 8vh;
+    }
+
+    .winMsg {
+        font-size: 3.5vh;
+        padding: 10px;
+        top: 8vh;
+    }
+
+    .newgame-button {
+        font-size: 4vh;
+        padding: 10px 15px;
+    }
+}
