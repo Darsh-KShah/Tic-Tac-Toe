@@ -136,8 +136,8 @@ h1 {
     
     .newgame-button {
         position: absolute;
-        left: 6vw;
-        font-size: 3vh;
+        left: 8vw;
+        font-size: 4vh;
         padding: 10px 15px;
     }
 
@@ -167,7 +167,7 @@ h1 {
     
     .newgame-button {
         position: absolute;
-        left: 4vw;
+        left: 4.5vw;
         font-size: 3.5vh;
         padding: 12px 18px;
     }
