@@ -1,5 +1,5 @@
 # 🎮 Tic-Tac-Toe
-A modern, minimalist **Tic-Tac-Toe** game built with pure **HTML, CSS & JavaScript**. Perfect for quick battles between friends with instant win detection and smooth animations.  
+A modern, minimalist **Tic-Tac-Toe** game built with **HTML, CSS & JavaScript**. Perfect for quick battles between friends with instant win detection and smooth animations.  
 
 [![Live Demo](https://img.shields.io/badge/PLAY_NOW-LAUNCH-%2300b894?style=for-the-badge)](https://darsh-kshah.github.io/Tic-Tac-Toe/)
 
